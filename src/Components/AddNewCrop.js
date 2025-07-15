@@ -6,7 +6,7 @@ function AddNewCropPage() {
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);
-    fetch("http://localhost:8080/plant-datasheets/vegetables", {
+    fetch("http://localhost:8080/plant-datasheets", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -35,7 +35,7 @@ function AddNewCropPage() {
 
         <label>Vegetable Type:</label>
         <select {...register("type")}>
-          <option value="LEAFY_GREEN">Leafy Green</option>
+          <option value="LEAFY">Leafy</option>
           <option value="ROOT">Root</option>
           {/* Add more based on your enum */}
         </select>
